@@ -2,46 +2,52 @@
 @section('title', getSettings()->app_name . ':: Terms and Conditions')
 @section('content')
 
-    <div id="banner-area" class="banner-area1" style="background-image:url(images/design.png);background-color:#3f1d71 ;">
-        <div class="banner-text">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="banner-heading">
-                            <h1 class="banner-title">Privacy Policy</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <section id="terms-condition" class="terms-condition solid-bg single-service-gap">
+    <section class="py-5">
         <div class="container">
-            <h3>1. Information We Collect</h3>
-    <p>We may collect personal information (name, email, phone number) and browsing data (IP address, cookies, device information).</p>
+            <h1 class="fw-bold text-primary mb-4">Privacy Policy</h1>
 
-    <h3>2. How We Use Your Information</h3>
-    <p>We use your information to provide and improve our services, respond to inquiries, and comply with legal requirements.</p>
+            <p>At <strong>Shiva Adventures</strong>, we value your privacy and are committed to protecting the personal
+                information you share with us. This Privacy Policy outlines how we collect, use, and safeguard your data.
+            </p>
 
-    <h3>3. Data Security</h3>
-    <p>We implement security measures to protect your personal data. However, no method of transmission is 100% secure.</p>
+            <h4 class="mt-4 fw-semibold">1. Information We Collect</h4>
+            <ul>
+                <li>Personal Information: Name, email address, phone number, and city collected through booking or contact
+                    forms.</li>
+                <li>Payment Details: Securely processed through third-party gateways; we do not store card information.</li>
+                <li>Website Usage: IP address, browser type, and interactions to help us improve our site and services.</li>
+            </ul>
 
-    <h3>4. Sharing Your Information</h3>
-    <p>We do not sell or share your personal data except when required by law or with trusted partners assisting in service delivery.</p>
+            <h4 class="mt-4 fw-semibold">2. How We Use Your Information</h4>
+            <ul>
+                <li>To confirm bookings and respond to inquiries.</li>
+                <li>To send updates, trip information, or promotional emails (you may opt out anytime).</li>
+                <li>To improve user experience and website functionality.</li>
+            </ul>
 
-    <h3>5. Cookies and Tracking</h3>
-    <p>We use cookies to enhance your experience. You can disable cookies in your browser settings.</p>
+            <h4 class="mt-4 fw-semibold">3. Data Security</h4>
+            <p>Your information is stored securely and is only accessible to authorized personnel. We use encryption and
+                secure technologies to protect your data.</p>
 
-    <h3>6. Your Rights</h3>
-    <p>You can request access, correction, or deletion of your personal data. You may also opt-out of marketing communications.</p>
+            <h4 class="mt-4 fw-semibold">4. Sharing of Information</h4>
+            <p>We do not sell, trade, or rent your personal information. It may only be shared with service providers for
+                the purpose of booking and logistics.</p>
 
-    <h3>7. Changes to This Policy</h3>
-    <p>We may update this Privacy Policy periodically. Please review it regularly.</p>
+            <h4 class="mt-4 fw-semibold">5. Cookies</h4>
+            <p>We may use cookies to enhance user experience. You can disable cookies through your browser settings.</p>
 
-    <p>For any concerns, contact us at <strong>{{ $settings->email }}</strong>.</p>
+            <h4 class="mt-4 fw-semibold">6. Third-Party Links</h4>
+            <p>Our website may contain links to external websites. We are not responsible for the privacy policies of those
+                sites.</p>
+
+            <h4 class="mt-4 fw-semibold">7. Your Consent</h4>
+            <p>By using our website, you consent to our privacy policy.</p>
+
+            <h4 class="mt-4 fw-semibold">8. Changes to This Policy</h4>
+            <p>We may update this policy occasionally. Any changes will be reflected on this page.</p>
+
+            <p class="mt-4"><strong>Last Updated:</strong> June 2025</p>
         </div>
-</section>
+    </section>
 
 @endsection

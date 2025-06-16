@@ -1,67 +1,55 @@
-<header id="header" class="header-two">
-    <div class="site-navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light p-0">
-
-                        <div class="logo">
-                            {{-- @dd($settings->toArray(), $social->toArray()) --}}
-                        <a class="d-block" href="{{ route('front.home') }}">
-                                @if (isset($settings->header_image) and !empty($settings->header_image))
-                                    <img loading="{{ $settings->app_name }}" src="{{ public_asset($settings->header_image) }}" alt="{{ $settings->app_name }}">
-                                @else
-                                {{ $settings->app_name }}
-                                @endif
-                            </a>
-                        </div><!-- logo end -->
-
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target=".navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div id="navbar-collapse" class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav align-items-center">
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('front.home') }}">Home</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('front.about') }}">About Us</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('front.vision') }}">Vision</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('front.services') }}">Services</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('front.gallery') }}">Gallery</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('front.contact') }}">Contact</a>
-                                </li>
-
-                                <li class="header-get-a-quote">
-                                    <a class="btn btn-primary" href="{{ route('front.contact') }}">Get A Quotation</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-                <!--/ Col end -->
-            </div>
-            <!--/ Row end -->
-        </div>
-        <!--/ Container end -->
-
+<!-- Top Bar -->
+<div class="top-bar d-flex justify-content-center align-items-center text-white py-2">
+    <div class="d-flex align-items-center">
+        <i class="fas fa-phone-alt mr-2"></i> CALL: +91-9761999826
+        <span class="mx-3">|</span>
+        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
     </div>
-    <!--/ Navigation end -->
-</header>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://sraconstruction.in/images/logo.png" alt="logo" height="40" class="mr-2">
+            <div>
+                <span style="color: orange; font-weight: bold;">SHIVA</span>
+                <span style="font-weight: bold;">ADVENTURES</span>
+            </div>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item px-2"><a class="nav-link @isActiveRoute('front.home')" href="{{ route('front.home') }}">Home</a></li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Treks</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Trek 1</a>
+                        <a class="dropdown-item" href="#">Trek 2</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Trips</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Trip 1</a>
+                        <a class="dropdown-item" href="#">Trip 2</a>
+                    </div>
+                </li>
+                <li class="nav-item px-2"><a class="nav-link @isActiveRoute('front.about')" href="{{ route('front.about') }}">About us</a></li>
+                <li class="nav-item px-2"><a class="nav-link @isActiveRoute('front.contact')" href="{{ route('front.contact') }}">Contact us</a></li>
+            </ul>
+        </div>
+
+        <!-- Call Now button -->
+        <div class="d-none d-lg-block">
+            <a class="btn call-now-btn ml-3" href="#">Call Now</a>
+        </div>
+    </div>
+</nav>

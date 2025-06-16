@@ -2,49 +2,57 @@
 @section('title', getSettings()->app_name . ':: Terms and Conditions')
 @section('content')
 
-    <div id="banner-area" class="banner-area1" style="background-image:url(images/design.png);background-color:#3f1d71 ;">
-        <div class="banner-text">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="banner-heading">
-                            <h1 class="banner-title">Terms and Conditions</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <section id="terms-condition" class="terms-condition solid-bg single-service-gap">
+    <section class="py-5">
         <div class="container">
-            <h3>1. Use of Our Website</h3>
-            <p>You must be at least 18 years old to use our services. By accessing our website, you agree to use it for
-                lawful purposes only.</p>
+            <h1 class="fw-bold text-primary mb-4">Terms & Conditions</h1>
 
-            <h3>2. Intellectual Property</h3>
-            <p>All content, including text, images, logos, and designs, are the property of <strong>{{ $settings->app_name }}</strong>
-                and protected under intellectual property laws.</p>
+            <p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using our website
+                or booking a trip with <strong>Shiva Adventures</strong>.</p>
 
-            <h3>3. Services and Pricing</h3>
-            <p>We reserve the right to modify, update, or discontinue any services at any time without prior notice.</p>
+            <h4 class="mt-4 fw-semibold">1. Booking Policy</h4>
+            <ul>
+                <li>All bookings must be made through our official website or verified agents.</li>
+                <li>A booking is considered confirmed only after full payment or as agreed by both parties.</li>
+            </ul>
 
-            <h3>4. User Responsibilities</h3>
-            <p>You are responsible for maintaining the security of your account credentials and providing accurate
-                information.</p>
+            <h4 class="mt-4 fw-semibold">2. Payment Terms</h4>
+            <ul>
+                <li>Payments can be made via secure online payment gateways, UPI, or bank transfer.</li>
+                <li>Prices are subject to change without prior notice until the booking is confirmed.</li>
+            </ul>
 
-            <h3>5. Limitation of Liability</h3>
-            <p>We are not responsible for any damages resulting from your use of our services.</p>
+            <h4 class="mt-4 fw-semibold">3. Cancellation & Refund Policy</h4>
+            <ul>
+                <li>Cancellations made 15 days before the trip will be refunded 70% of the amount.</li>
+                <li>No refund will be provided for cancellations within 7 days of the trip.</li>
+                <li>In case of weather or natural calamities, rescheduling may be offered.</li>
+            </ul>
 
-            <h3>6. Governing Law</h3>
-            <p>These terms are governed by the laws of India. Any disputes shall be resolved in the
-                appropriate courts of High Court.</p>
+            <h4 class="mt-4 fw-semibold">4. Travel Insurance</h4>
+            <p>We strongly recommend all participants have valid travel insurance covering medical emergencies and
+                cancellations.</p>
 
-            <h3>7. Changes to Terms</h3>
-            <p>We reserve the right to update these Terms and Conditions. Please review this page periodically.</p>
+            <h4 class="mt-4 fw-semibold">5. Responsibilities</h4>
+            <ul>
+                <li>Participants are responsible for their belongings and fitness to undertake the trek.</li>
+                <li>Shiva Adventures is not liable for any injury, loss, or damage during the trip caused by unforeseen
+                    events.</li>
+            </ul>
 
-            <p>If you have any questions, contact us at <strong>{{ $settings->email }}</strong>.</p>
+            <h4 class="mt-4 fw-semibold">6. Code of Conduct</h4>
+            <p>All participants must follow the instructions of the guide and maintain discipline during the journey.
+                Misbehavior may result in removal from the group without refund.</p>
+
+            <h4 class="mt-4 fw-semibold">7. Use of Media</h4>
+            <p>We may use photographs or videos taken during the trip for promotional purposes. Please inform us if you wish
+                to opt out.</p>
+
+            <h4 class="mt-4 fw-semibold">8. Changes to Itinerary</h4>
+            <p>Shiva Adventures reserves the right to modify the itinerary due to weather, safety, or operational concerns.
+            </p>
+
+            <p class="mt-4"><strong>Last Updated:</strong> June 2025</p>
+        </div>
     </section>
 
 @endsection

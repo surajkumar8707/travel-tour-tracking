@@ -6,6 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 use Yajra\DataTables\Html\Builder;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Blade;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -29,9 +30,12 @@ class AppServiceProvider extends ServiceProvider
         $settings = getSettings(); // Fetch the settings
         $social = getSocialMediaLink();
 
+        Blade::directive('isActiveRoute', function ($expression) {
+            return "<?php echo isActiveRoute($expression); ?>";
+        });
+
         // Share $settings globally with all views
         View::share('settings', $settings);
         View::share('social', $social);
-
     }
 }

@@ -1,530 +1,532 @@
 @extends('layouts.app')
 @section('title', 'Home Page')
 @section('content')
-{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/> --}}
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+    <!-- Hero Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <!-- First Slide -->
+            <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1503437313881-503a91226402?auto=format&fit=crop&w=1950&q=80"
+                    class="d-block w-100" alt="adventure" style="height: 90vh; object-fit: cover;">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                    <h2 class="text-uppercase font-weight-bold">LET'S GO ON</h2>
+                    <h1 class="display-4 font-weight-bold">An Adventure</h1>
+                    <p class="lead">TREKKING | EXPEDITIONS | ADVENTURE SPORTS | ROADTRIPS</p>
+                    <a href="#" class="btn btn-lg mt-3">JOIN NOW</a>
+                </div>
+            </div>
 
-<style>
-        .subscribe {
-            background: url(https://sraconstruction.in/images/connectbg.png);
-            background-size: cover;
-            padding: 0;
-        }
-
-        .service-1::before {
-            content: "";
-            background: url("");
-            background-size: cover;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: -82px;
-            padding: 41px;
-        }
-
-        .service-4::after {
-            content: "";
-            background: url("");
-            background-size: cover;
-            background-position: right center;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: -82px;
-            padding: 41px;
-        }
-
-        .service-4 {
-            background: url("{{ public_asset('assets/front/images/service_river_front_constructor.jpg') }}");
-            background-size: cover;
-            margin-top: 2%;
-        }
-
-        .service-1 {
-            background: url("{{ public_asset('assets/front/images/service_commercial_residential.jpg') }}");
-            background-size: cover;
-        }
-
-        .service-2 {
-            background: url("{{ public_asset('assets/front/images/service_industrial.jpg') }}");
-            background-size: cover;
-            margin-top: 2%;
-        }
-
-        .service-3 {
-            background: url("{{ public_asset('assets/front/images/post_tensioning_or_cantilever.jpg') }}");
-            background-size: cover;
-            margin-top: 2%;
-        }
-         .testimonial-area-bg {
-            padding: 60px 0;
-        }
-
-        .quote-item {
-            background-color: #ffffff00;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 0 auto;
-            max-width: 800px;
-        }
-
-        .quote-text {
-            display: block;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .quote-author {
-            font-weight: bold;
-        }
-
-        .owl-dots {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .owl-dot {
-            display: inline-block;
-            background: none;
-            border: 1px solid white;
-            color: white;
-            width: 30px;
-            height: 30px;
-            line-height: 30px;
-            border-radius: 50%;
-            margin: 0 5px;
-            cursor: pointer;
-        }
-
-        .owl-dot.active {
-            background-color: white;
-            color: #222;
-        }
-
-        h3.column-title {
-            margin-bottom: 40px;
-        }
-    </style>
-    <div class="banner-carousel banner-carousel-2 mb-0">
-        <div class="banner-carousel-item"
-            style="background-image:url(https://sraconstruction.in/images/slider-main/Slider5.jpg)">
-            <div class="container">
-                <div class="box-slider-content">
-                    <div class="box-slider-text">
-                        <div>
-                            @if (isset($settings->header_image) and !empty($settings->header_image))
-                                <img class="w-50" loading="{{ $settings->app_name }}"
-                                    src="{{ public_asset($settings->header_image) }}" alt="{{ $settings->app_name }}">
-                            @endif
-                        </div>
-                        <h1 class="box-slide-sub-title">A COMPANY YOU CAN<br>
-                            TRUST TO BE WITH<br>
-                            YOU AT EVERY STEP
-                        </h1>
-                    </div>
+            <!-- Second Slide -->
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1503437313881-503a91226402?auto=format&fit=crop&w=1950&q=80"
+                    class="d-block w-100" alt="adventure" style="height: 90vh; object-fit: cover;">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                    <h2 class="text-uppercase font-weight-bold">LET'S GO ON</h2>
+                    <h1 class="display-4 font-weight-bold">An Adventure</h1>
+                    <p class="lead">TREKKING | EXPEDITIONS | ADVENTURE SPORTS | ROADTRIPS</p>
+                    <a href="#" class="btn btn-lg mt-3">JOIN NOW</a>
                 </div>
             </div>
         </div>
 
-        <div class="banner-carousel-item"
-            style="background-image:url(https://sraconstruction.in/images/slider-main/Slider4.jpg)">
-            <div class="slider-content text-left">
-                <div class="container">
-                </div>
-            </div>
-        </div>
-        <div class="banner-carousel-item"
-            style="background-image:url(https://www.lighthouseriskservices.com/wp-content/uploads/2023/02/pexels-akin-victor-10202865.jpg)">
-            <div class="slider-content text-left">
-                <div class="container">
-                </div>
-            </div>
-        </div>
-        <div class="banner-carousel-item"
-            style="background-image:url(https://plus.unsplash.com/premium_photo-1682724602925-f0264b85953f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YnVpbGRpbmclMjBjb25zdHJ1Y3Rpb258ZW58MHx8MHx8fDA%3D)">
-            <div class="slider-content text-left">
-                <div class="container">
-                </div>
-            </div>
-        </div>
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%);"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%);"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 
-    <section class="call-to-action no-padding">
+    <!-- Summer Offer Section -->
+    <section class="py-5 text-center" style="background-color: #f8fcfd;">
         <div class="container">
-            <div class="action-style-box">
-                <div class="row">
-                    <div class="col-md-12 text-center text-md-center">
-                        <div class="call-to-action-text">
-                            <h3 class="action-title">For Services Related Queries! Call Us Now: +91-{{ $settings->contact }}
-                            </h3>
-                        </div>
-                    </div><!-- Col end -->
-
-                </div><!-- row end -->
-            </div><!-- Action style box -->
-        </div><!-- Container end -->
-    </section><!-- Action end -->
-
-    <section id="ts-features" class="ts-features pb-2">
-        <div class="container">
-            <h2 class="text-center mb-5">TRUSTED BY TOP INDUSTRY ORGANIZATIONS</h2>
-            <div class="row">
-
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <div class="ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="https://sraconstruction.in/images/clients/godrej.png"
-                                alt="service-image">
-                        </div>
-
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6">
+                    <div class="p-4 rounded" style="background: linear-gradient(to right, #0088a9, #00b7c5); color: white;">
+                        <h2 class="font-weight-bold text-warning mb-1">SUMMER OFFER</h2>
+                        <p class="mb-3">Get upto 40% off on winter treks</p>
+                        <a href="#" class="btn btn-warning font-weight-bold">BOOK NOW</a>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <div class="mt-3 ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="{{ public_asset('assets/front/images/lodha.jpg') }}">
-                        </div>
-
-                    </div><!-- Service1 end -->
-                </div><!-- Col 1 end -->
-
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <div class="ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100" src="https://sraconstruction.in/images/clients/sitaram.png"
-                                alt="service-image">
-                        </div>
-
-                    </div><!-- Service2 end -->
-                </div><!-- Col 2 end -->
-
-                <div class="col-lg-3 col-md-6 mb-5">
-                    <div class="ts-service-box">
-                        <div class="ts-service-image-wrapper">
-                            <img loading="lazy" class="w-100"
-                                src="https://sraconstruction.in/images/clients/t-bhimjyani.png" alt="service-image">
-                        </div>
-
-                    </div><!-- Service3 end -->
-                </div><!-- Col 3 end -->
-
-            </div><!-- Content row end -->
-        </div><!-- Container end -->
-    </section>
-    {{--  --}}
-
-    <section id="main-container" class="main-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 mt-5 align-content-center mt-lg-0">
-
-                    <div class="service-box service-1">
-                        <div class="service-overlay text-center">
-                            <a href="{{ route('front.services') }}">
-                                <h2>Residential and Commercial Construction
-                                    <img src="https://sraconstruction.in/images/arrow.png" width="25" alt="">
-                                </h2>
-                            </a>
-
-
-                        </div>
-                    </div>
-
-                    <div class="service-box service-2">
-                        <div class="service-overlay text-center">
-                            <a href="{{ route('front.services') }}">
-                                <h2>Mivan Technology
-                                    <img src="https://sraconstruction.in/images/arrow.png" width="25" alt="">
-                                </h2>
-                            </a>
-
-
-                        </div>
-                    </div>
-
-                    <div class="service-box service-3">
-                        <div class="service-overlay text-center">
-                            <a href="{{ route('front.services') }}">
-                                <h2>Post Tensioning or cantilever
-                                    <img src="https://sraconstruction.in/images/arrow.png" width="25" alt="">
-                                </h2>
-                            </a>
-
-
-                        </div>
-                    </div>
-
-                </div><!-- Col end -->
-
-                <div class="col-lg-5 about-section">
-                    <h3 class="column-title">A COMPANY YOU CAN<br> TRUST TO BE WITH YOU<br> AT EVERY STEP</h3>
-
-                    <p>The {{ $settings->app_name }} company is a top it's not a general contractor special high-rise and
-                        special for mivan high-rise building contractors. However, what makes us different
-                        from our competitors is our commitment to safety, operational excellence, and an exceptional
-                        client experience. We work collaboratively with you to reach your objectives. By hiring the
-                        industry's best, we build the highest-performing teams; we are adept at working with design
-                        teams; we are experts at understanding the needs of the end-user, and we deliver projects
-                        ahead of schedule without compromising quality." We cover all Commercial/ residential,
-                        Industrial, Infrastructure & River front development projects.
+            <!-- About Section -->
+            <div class="row align-items-center py-4 px-2" style="background-color: #f0fdff; border-radius: 8px;">
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <img src="https://shivaadventures.in/images/abtimg.jpg" alt="About Shiva Adventures"
+                        class="img-fluid rounded">
+                </div>
+                <div class="col-md-9 text-left">
+                    <p>
+                        Welcome to <strong style="color: #ff7900;">Shiva Adventures</strong> – Trekking Company! We are
+                        a leading trekking company based in Uttarakhand and we specialize in providing high-quality
+                        trekking experiences that are suitable for all skill levels. We are a passionate group of
+                        experienced trek leaders who have been exploring the Himalayas for over 15+ years. Our mission
+                        is to provide our customers with unforgettable trekking experiences and life-changing
+                        adventures.
                     </p>
-                    <div class="plan-action">
-                        <a href="{{ route('front.services') }}" class="btn btn-primary float-right">EXPLORE MORE...</a>
-                    </div>
-                </div><!-- Col end -->
-
-            </div><!-- Content row end -->
-
-        </div><!-- Container end -->
-    </section><!-- Main container end -->
-
-    <section id="main-container" class="main-container about-section2-img">
-        <div class="container-fluid">
-            <div class="row about-section-bg">
-                <div class="col-lg-7 mt-lg-0 about-section-img">
-
-                    <img src="{{ public_asset('assets/front/images/aboutimage.jpg') }}" alt="">
-
-                </div><!-- Col end -->
-
-                <div class="col-lg-5 about-section2">
-                    <h3 class="column-title">THE QUALITY & <br>
-                        REPUTATION TO GET <br>
-                        THE JOB DONE RIGHT<br></h3>
-
-                    <p>Construction Mivan Technology LLP is a leading construction company based in Sivan Bihar, delivering
-                        high-quality construction solutions since 2025. With a strong foundation in innovation and
-                        reliability, we specialize in building structures that reflect excellence, efficiency, and long-term
-                        durability.</p>
-                    <p>At Construction Mivan Technology LLP, we take pride in crafting buildings with exceptional attention
-                        to detail and superior craftsmanship. Our team consists of over 100 qualified and experienced
-                        professionals, many of whom have worked together for more than twenty-five years, bringing unmatched
-                        synergy, skill, and dedication to every project we undertake.</p>
-                    <div class="plan-action mb-2">
-                        <a href="{{ route('front.about') }}" class="btn btn-primary float-left mb-2">EXPLORE MORE...</a>
-                    </div>
-                </div><!-- Col end -->
-
-            </div><!-- Content row end -->
-
-        </div><!-- Container end -->
-    </section><!-- Main container end -->
-
-    <section class="content testimonial-area-bg">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h3 class="column-title text-center color-white">CLIENT FEEDBACK</h3>
-
-                <div class="testimonial-slide owl-carousel">
-                    <div class="item" data-dot="1">
-                        <div class="quote-item">
-                            <span class="quote-text">
-                                “We are highly satisfied with the quality of work delivered by M/S MyCompany Construction.
-                                Their team demonstrated excellent professionalism throughout the execution of our
-                                projects, from the design phase to completion. The steel structure of the bridge and the
-                                construction of our bungalow were completed on time and exceeded our expectations in
-                                terms of craftsmanship and attention to detail. We highly recommend their services for
-                                future projects.”
-                            </span>
-                            <div class="quote-item-footer">
-                                <div class="quote-item-info">
-                                    <h3 class="quote-author">Dr. Deepak Gupta</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item" data-dot="2">
-                        <div class="quote-item">
-                            <span class="quote-text">
-                                “We had the pleasure of working with M/S MyCompany Construction on several key projects.
-                                The professionalism, attention to detail, and consistent project delivery were impressive.
-                                They ensured that each project was executed in compliance with safety regulations,
-                                quality standards, and timelines. We look forward to collaborating with them on future
-                                developments.”
-                            </span>
-                            <div class="quote-item-footer">
-                                <div class="quote-item-info">
-                                    <h3 class="quote-author">Mohit Tiwari</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="item" data-dot="3">
-                        <div class="quote-item">
-                            <span class="quote-text">
-                                “MyCompany Construction has delivered exceptional service on our project from start to finish.
-                                Their ability to handle complex tasks and deliver within budget has been remarkable.
-                                We’ve been extremely pleased with their communication, as well as their commitment to
-                                quality work. We highly recommend them for any construction-related needs.”
-                            </span>
-                            <div class="quote-item-footer">
-                                <div class="quote-item-info">
-                                    <h3 class="quote-author">Ankit Singh</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- .testimonial-slide -->
+                </div>
             </div>
-        </div>
-    </div>
-</section>
 
-
-    @if (count($galleries) > 0)
-        <section id="project-area" class="project-area solid-bg">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-lg-7">
-
-                        <h3 class="section-sub-title">PROJECTS GALLERY</h3>
-                    </div>
-                    <div class="col-lg-5">
-                        <div class="general-btn text-center">
-                            <a class="btn btn-primary" href="{{ route('front.gallery') }}">VIEW ALL...</a>
+            <!-- Categories Section -->
+            <div class="row justify-content-center mt-5">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow" style="overflow: hidden; border-radius: 20px;">
+                        <img src="https://shivaadventures.in/images/catimg1.jpg" class="card-img" alt="Trekking">
+                        <div class="card-img-overlay d-flex align-items-end p-3"
+                            style="background: rgba(0,0,0,0.4); border-radius: 20px;">
+                            <h4 class="text-white font-weight-bold mb-0">TREKKING</h4>
                         </div>
                     </div>
                 </div>
-                <!--/ Title row end -->
 
-                <div class="row">
-                    <div class="col-12">
-                        <!-- project filter end -->
-                        <div class="row shuffle-wrapper shuffle"
-                            style="position: relative; overflow: hidden; height: 273.6px; transition: height 250ms cubic-bezier(0.4, 0, 0.2, 1);">
-                            <div class="col-1 shuffle-sizer"></div>
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow" style="overflow: hidden; border-radius: 20px;">
+                        <img src="https://shivaadventures.in/images/catimg2.jpg" class="card-img" alt="Roadtrip">
+                        <div class="card-img-overlay d-flex align-items-end p-3"
+                            style="background: rgba(0,0,0,0.4); border-radius: 20px;">
+                            <h4 class="text-white font-weight-bold mb-0">ROADTRIP</h4>
+                        </div>
+                    </div>
+                </div>
 
-                            <div class="col-lg-4 col-sm-6 shuffle-item shuffle-item--visible"
-                                data-groups="[&quot;government&quot;,&quot;healthcare&quot;]"
-                                style="position: absolute; top: 0px; left: 0px; visibility: visible; will-change: transform; opacity: 1; transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                                <div class="project-img-container">
-                                    <a class="gallery-popup cboxElement"
-                                        href="{{ public_asset('assets/front/images/gallery/IMG-20250201-WA0024.jpg') }}"
-                                        aria-label="project-img">
-                                        <img class="img-fluid"
-                                            src="{{ public_asset('assets/front/images/gallery/IMG-20250201-WA0024.jpg') }}"
-                                            alt="project-img">
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow" style="overflow: hidden; border-radius: 20px;">
+                        <img src="https://shivaadventures.in/images/catimg3.jpg" class="card-img" alt="Pilgrimage">
+                        <div class="card-img-overlay d-flex align-items-end p-3"
+                            style="background: rgba(0,0,0,0.4); border-radius: 20px;">
+                            <h4 class="text-white font-weight-bold mb-0">PILGRIMAGE</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                                    </a>
-                                    <div class="project-item-info">
-                                        <div class="project-item-info-content">
-                                            <h3 class="project-item-title">
-                                                <a class="gallery-popup cboxElement"
-                                                    href="{{ public_asset('assets/front/images/gallery/IMG-20250201-WA0024.jpg') }}"
-                                                    aria-label="project-img">Project Building</a>
-                                            </h3>
-                                            <!-- <p class="project-cat">Commercial, Interiors</p> -->
-                                        </div>
-                                    </div>
-                                </div>
+    <!-- Upcoming Treks Section -->
+    <section class="py-5" style="background-color: #f0fcfc;">
+        <div class="container">
+            <!-- Heading Row -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <small class="text-muted font-weight-bold">May–July edition</small>
+                    <h3 class="font-weight-bold text-info">UPCOMING TREKS</h3>
+                </div>
+                <div>
+                    <a href="#" class="btn btn-warning shadow" style="padding: 10px 20px; border-radius: 8px;">BOOK
+                        NOW</a>
+                </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="btn-group d-flex flex-wrap mb-5" role="group">
+                <button type="button" class="btn btn-info font-weight-bold text-warning mr-2 mb-2">All treks</button>
+                <button type="button" class="btn btn-outline-info mr-2 mb-2">Kedarkantha</button>
+                <button type="button" class="btn btn-outline-info mr-2 mb-2">Chopta Tungnath</button>
+                <button type="button" class="btn btn-outline-info mr-2 mb-2">Dayara Bugyal</button>
+                <button type="button" class="btn btn-outline-info mr-2 mb-2">Har Ki Dun</button>
+                <button type="button" class="btn btn-outline-info mb-2">Valley of Flowers</button>
+            </div>
+
+            <!-- Trek Cards -->
+            <div class="row">
+                <!-- Card Template -->
+                <div class="col-md-4 col-lg-3 mb-4" style="min-width: 250px;">
+                    <div class="card shadow-sm rounded" style="border: none;">
+                        <img src="https://shivaadventures.in/images/valley-flower.jpg" class="card-img-top"
+                            alt="Valley of Flowers">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="text-warning">★★★★★</span>
                             </div>
-                            <div class="col-lg-4 col-sm-6 shuffle-item shuffle-item--visible"
-                                data-groups="[&quot;government&quot;,&quot;healthcare&quot;]"
-                                style="position: absolute; top: 0px; left: 0px; visibility: visible; will-change: transform; opacity: 1; transform: translate(380px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                                <div class="project-img-container">
-                                    <a class="gallery-popup cboxElement"
-                                        href="{{ public_asset('assets/front/images/gallery/IMG-20250201-WA0012.jpg') }}"
-                                        aria-label="project-img">
-                                        <img class="img-fluid"
-                                            src="{{ public_asset('assets/front/images/gallery/IMG-20250201-WA0012.jpg') }}"
-                                            alt="project-img">
+                            <h5 class="card-title">Valley of flowers</h5>
+                            <p><span class="badge badge-info">Grade: E</span></p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check-circle text-info mr-2"></i>Most Popular Monsoon Trek</li>
+                                <li><i class="fas fa-map-marker-alt text-info mr-2"></i>Region: Uttarakhand</li>
+                                <li><i class="fas fa-clock text-info mr-2"></i>Duration: 5N/6D</li>
+                                <li><i class="fas fa-mountain text-info mr-2"></i>Altitude: 12,000 ft</li>
+                            </ul>
+                            <a href="#" class="btn btn-warning btn-block mt-3">KNOW MORE <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
 
-                                    </a>
-                                    <div class="project-item-info">
-                                        <div class="project-item-info-content">
-                                            <h3 class="project-item-title">
-                                                <a class="gallery-popup cboxElement"
-                                                    href="{{ public_asset('assets/front/images/gallery/IMG-20250201-WA0012.jpg') }}"
-                                                    aria-label="project-img">Project Building</a>
-                                            </h3>
-                                            <!-- <p class="project-cat">Commercial, Interiors</p> -->
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- Repeat similar cards below -->
+                <!-- Kedarkantha Trek -->
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="card shadow-sm rounded">
+                        <img src="https://shivaadventures.in/images/kedarkantha.jpg" class="card-img-top"
+                            alt="Kedarkantha">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="text-warning">★★★★★</span>
                             </div>
-                            <div class="col-lg-4 col-sm-6 shuffle-item shuffle-item--visible"
-                                data-groups="[&quot;government&quot;,&quot;healthcare&quot;]"
-                                style="position: absolute; top: 0px; left: 0px; visibility: visible; will-change: transform; opacity: 1; transform: translate(760px, 0px) scale(1); transition-duration: 250ms; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-property: transform, opacity;">
-                                <div class="project-img-container">
-                                    <a class="gallery-popup cboxElement"
-                                        href="{{ public_asset('assets/front/images/gallery/IMG-20250201-WA0022.jpg') }}"
-                                        aria-label="project-img">
-                                        <img class="img-fluid"
-                                            src="{{ public_asset('assets/front/images/gallery/IMG-20250201-WA0022.jpg') }}"
-                                            alt="project-img">
+                            <h5 class="card-title">Kedarkantha Trek</h5>
+                            <p><span class="badge badge-info">Grade: E</span></p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check-circle text-info mr-2"></i>Most Popular Winter Trek</li>
+                                <li><i class="fas fa-map-marker-alt text-info mr-2"></i>Region: Uttarakhand</li>
+                                <li><i class="fas fa-clock text-info mr-2"></i>Duration: 4N/5D</li>
+                                <li><i class="fas fa-mountain text-info mr-2"></i>Altitude: 12,500 ft</li>
+                            </ul>
+                            <a href="#" class="btn btn-warning btn-block mt-3">KNOW MORE <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
 
-                                    </a>
-                                    <div class="project-item-info">
-                                        <div class="project-item-info-content">
-                                            <h3 class="project-item-title">
-                                                <a class="gallery-popup cboxElement"
-                                                    href="{{ public_asset('assets/front/images/gallery/IMG-20250201-WA0022.jpg') }}"
-                                                    aria-label="project-img">Project Building</a>
-                                            </h3>
-                                            <!-- <p class="project-cat">Commercial, Interiors</p> -->
-                                        </div>
-                                    </div>
-                                </div>
+                <!-- Tungnath Trek -->
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="card shadow-sm rounded">
+                        <img src="https://shivaadventures.in/images/tungnath.jpg" class="card-img-top"
+                            alt="Tungnath Trek">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="text-warning">★★★★★</span>
                             </div>
+                            <h5 class="card-title">Tungnath Trek</h5>
+                            <p><span class="badge badge-info">Grade: E</span></p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check-circle text-info mr-2"></i>Most Popular Winter Trek</li>
+                                <li><i class="fas fa-map-marker-alt text-info mr-2"></i>Region: Uttarakhand</li>
+                                <li><i class="fas fa-clock text-info mr-2"></i>Duration: 4N/5D</li>
+                                <li><i class="fas fa-mountain text-info mr-2"></i>Altitude: 13,500 ft</li>
+                            </ul>
+                            <a href="#" class="btn btn-warning btn-block mt-3">KNOW MORE <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Dayara Bugyal -->
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="card shadow-sm rounded">
+                        <img src="https://shivaadventures.in/images/dayara.jpg" class="card-img-top" alt="Dayara Bugyal">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="text-warning">★★★★★</span>
+                            </div>
+                            <h5 class="card-title">Dayara Bugyal</h5>
+                            <p><span class="badge badge-info">Grade: E</span></p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check-circle text-info mr-2"></i>Most Popular Winter Trek</li>
+                                <li><i class="fas fa-map-marker-alt text-info mr-2"></i>Region: Uttarakhand</li>
+                                <li><i class="fas fa-clock text-info mr-2"></i>Duration: 4N/5D</li>
+                                <li><i class="fas fa-mountain text-info mr-2"></i>Altitude: 11,181 ft</li>
+                            </ul>
+                            <a href="#" class="btn btn-warning btn-block mt-3">KNOW MORE <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Har Ki Dun -->
+                <div class="col-md-4 col-lg-3 mb-4">
+                    <div class="card shadow-sm rounded">
+                        <img src="https://shivaadventures.in/images/harkidun.jpg" class="card-img-top" alt="Har Ki Dun">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="text-warning">★★★★★</span>
+                            </div>
+                            <h5 class="card-title">Har Ki Dun Trek</h5>
+                            <p><span class="badge badge-info">Grade: E</span></p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check-circle text-info mr-2"></i>Most Popular Winter Trek</li>
+                                <li><i class="fas fa-map-marker-alt text-info mr-2"></i>Region: Uttarakhand</li>
+                                <li><i class="fas fa-clock text-info mr-2"></i>Duration: 6N/7D</li>
+                                <li><i class="fas fa-mountain text-info mr-2"></i>Altitude: 12,000 ft</li>
+                            </ul>
+                            <a href="#" class="btn btn-warning btn-block mt-3">KNOW MORE <i
+                                    class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f0fcfc;">
+        <div class="container">
+            <!-- Header row -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <small class="text-muted font-weight-bold">Pilgrimages and Roadtrips</small>
+                    <h3 class="font-weight-bold text-info">POPULOR PACKAGES</h3>
+                </div>
+                <a href="#" class="btn text-white font-weight-bold"
+                    style="background: linear-gradient(135deg, #f97428, #ff9659); border-radius: 8px; box-shadow: 0 0 10px rgba(255, 130, 66, 0.4); padding: 10px 20px;">BOOK
+                    NOW</a>
+            </div>
+
+            <!-- Cards Row -->
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm border-0 rounded-lg">
+                        <img src="https://shivaadventures.in/images/kedarnath.jpg" class="card-img-top rounded-top"
+                            alt="Kedarnath Yatra">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="text-warning">★★★★★</span>
+                            </div>
+                            <h5 class="card-title font-weight-bold">Kedarnath Yatra</h5>
+                            <p><span class="badge badge-warning text-white px-2 py-1">Grade: Easy</span></p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check-circle text-info mr-2"></i>Most Popular Pilgrimage</li>
+                                <li><i class="fas fa-map-marker-alt text-info mr-2"></i>Region: Uttarakhand</li>
+                                <li><i class="fas fa-clock text-info mr-2"></i>Duration: 4N/5D</li>
+                                <li><i class="fas fa-mountain text-info mr-2"></i>Altitude: 11,755 ft</li>
+                            </ul>
+                            <a href="#" class="btn btn-info btn-block text-white font-weight-bold mt-3">KNOW
+                                MORE <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm border-0 rounded-lg">
+                        <img src="https://shivaadventures.in/images/chardham.jpg" class="card-img-top rounded-top"
+                            alt="Chardham Yatra">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="text-warning">★★★★★</span>
+                            </div>
+                            <h5 class="card-title font-weight-bold">Chardham Yatra</h5>
+                            <p><span class="badge badge-warning text-white px-2 py-1">Grade: Easy</span></p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check-circle text-info mr-2"></i>Most Popular Pilgrimage</li>
+                                <li><i class="fas fa-map-marker-alt text-info mr-2"></i>Region: Uttarakhand</li>
+                                <li><i class="fas fa-clock text-info mr-2"></i>Duration: 8N/9D</li>
+                                <li><i class="fas fa-mountain text-info mr-2"></i>Altitude: 11,755 ft</li>
+                            </ul>
+                            <a href="#" class="btn btn-info btn-block text-white font-weight-bold mt-3">KNOW
+                                MORE <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm border-0 rounded-lg">
+                        <img src="https://shivaadventures.in/images/spiti.jpg" class="card-img-top rounded-top"
+                            alt="Spiti Roadtrip">
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="text-warning">★★★★★</span>
+                            </div>
+                            <h5 class="card-title font-weight-bold">Spiti Roadtrip</h5>
+                            <p><span class="badge badge-warning text-white px-2 py-1">Grade: Easy</span></p>
+                            <ul class="list-unstyled text-muted small">
+                                <li><i class="fas fa-check-circle text-info mr-2"></i>Most Populor Winter Trek</li>
+                                <li><i class="fas fa-map-marker-alt text-info mr-2"></i>Region: Uttarakhand</li>
+                                <li><i class="fas fa-clock text-info mr-2"></i>Duration: 4N/5D</li>
+                                <li><i class="fas fa-mountain text-info mr-2"></i>Altitude: 12,500 ft</li>
+                            </ul>
+                            <a href="#" class="btn btn-info btn-block text-white font-weight-bold mt-3">KNOW
+                                MORE <i class="fas fa-arrow-right ml-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5" style="background-color: #f0fcfc;">
+        <div class="container text-center">
+            <h2 class="font-weight-bold text-info mb-3">WHY CHOOSE US?</h2>
+            <p class="mb-5" style="max-width: 800px; margin: 0 auto;">
+                <strong class="text-info">Shiva Adventures</strong> is your go-to adventure tourism company for an
+                unforgettable experience.
+                Our team of experts ensures your safety as we prioritize responsible and sustainable tourism practices.
+                <span class="text-primary">From trekking to camping, road trips to mountain expeditions</span>, we
+                provide a wide range of adventure services.
+                Our commitment to excellent customer service means we’re always available to answer any questions or
+                concerns.
+                Choose Shiva Adventures for a memorable and enjoyable adventure in the stunning Himalayan region.
+            </p>
+
+            <div class="row justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4727/4727429.png" class="img-fluid mb-3"
+                            alt="Team">
+                        <h6 class="font-weight-bold">Experienced and knowledgeable team</h6>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2721/2721272.png" class="img-fluid mb-3"
+                            alt="Safety">
+                        <h6 class="font-weight-bold">Top priority on quality &amp; safety</h6>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2972/2972350.png" class="img-fluid mb-3"
+                            alt="Customer Service">
+                        <h6 class="font-weight-bold">Excellent customer service</h6>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="p-4 bg-white rounded shadow-sm h-100">
+                        <img src="https://cdn-icons-png.flaticon.com/512/236/236831.png" class="img-fluid mb-3"
+                            alt="Sustainable">
+                        <h6 class="font-weight-bold">Sustainable and responsible tourism</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 text-center">
+        <div class="container">
+            <h6 class="text-muted">What our happy travelers says about us</h6>
+            <h2 class="font-weight-bold text-info mb-5">REVIEWS</h2>
+
+            <!-- Swiper Carousel -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <!-- Review 1 -->
+                    <div class="swiper-slide">
+                        <div class="border rounded p-3">
+                            <strong>Rahul Shrivastava</strong>
+                            <hr />
+                            <p>The Spiti road trip with Shiva Adventures was incredible! From the stunning scenery to
+                                the knowledgeable guides, everything was top-notch. I can't wait to book my next
+                                adventure with them.</p>
                         </div>
                     </div>
 
-
-
-                </div><!-- Content row end -->
-            </div>
-            <!--/ Container end -->
-        </section>
-    @endif
-
-
-    <section class="subscribe no-padding">
-        <div class="overlay-yellow">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <h2>
-                            HAVE THE HOME THAT YOU<br>
-                            AND YOUR FAMILY DESERVE
-                        </h2>
-                        <p>
-                            We value collaboration and your input. The more we discuss upfront in<br>
-                            regards to your home's needs, the better the finished project will be
-
-                        </p>
-                        <div class="general-btn text-center">
-                            <a class="btn btn-primary" href="{{ route('front.contact') }}">CONNECT WITH US</a>
+                    <!-- Review 2 -->
+                    <div class="swiper-slide">
+                        <div class="border rounded p-3">
+                            <strong>Asim Khan</strong>
+                            <hr />
+                            <p>What an amazing experience! The Spiti road trip with Shiva Adventures was an adventure of
+                                a lifetime. The team was professional, friendly, and ensured our safety at all times.
+                            </p>
                         </div>
-                    </div><!-- Col end -->
-                </div><!-- Content row end -->
-            </div><!--/ Container end -->
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="swiper-slide">
+                        <div class="border rounded p-3">
+                            <strong>Mahi Jain</strong>
+                            <hr />
+                            <p>The Kedarkantha winter trek with Shiva Adventures was incredible! The guides were
+                                knowledgeable and supportive, and the views were breathtaking. I highly recommend this
+                                experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="border rounded p-3">
+                            <strong>Neha Mehra</strong>
+                            <hr />
+                            <p>One of the best trips I’ve ever had. Perfect planning and great team support. Loved every
+                                bit of it!</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Swiper Pagination & Arrows -->
+                <div class="swiper-pagination mt-3"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <!-- Rating Logos -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-3 col-6 mb-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/768px-Google_%22G%22_Logo.svg.png"
+                        width="30">
+                    <strong>GOOGLE RATINGS</strong>
+                    <span class="text-warning">5.0 ★★★★★</span>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        width="30">
+                    <strong>FACEBOOK RATINGS</strong>
+                    <span class="text-warning">5.0 ★★★★★</span>
+                </div>
+            </div>
+
+            <!-- Book Now Button -->
+            <div class="mt-4">
+                <a href="#booking" class="btn btn-warning shadow"
+                    style="background: linear-gradient(135deg, #ff7f50, #ff5722); color: #fff; padding: 12px 24px; border-radius: 8px;">
+                    BOOK NOW
+                </a>
+            </div>
         </div>
     </section>
-    <!--/ subscribe end -->
-@endsection
 
-@push('scripts')
-{{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script> --}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.testimonial-slide').owlCarousel({
-            items: 1,
-            loop: true,
-            nav: false,
-            dots: true,
-            dotsData: true,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            smartSpeed: 600
-        });
-    });
-</script>
-@endpush
+    <!-- Travel Blogs Section -->
+    <section class="travel-blogs py-5 text-center">
+        <div class="container">
+            <p class="text-muted">Read our travel related blog section</p>
+            <h2 class="fw-bold text-primary">TRAVEL BLOGS</h2>
+
+            <div class="row mt-4">
+                <!-- Blog 1 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm border-0 h-100 rounded-4">
+                        <img src="{{ asset('images/kedarkantha.jpg') }}" class="card-img-top rounded-top-4"
+                            alt="Kedarkantha Trek">
+                        <div class="card-body text-start">
+                            <h5 class="card-title fw-semibold">
+                                Kedarkantha Trek – A Journey to the Most Magnificent Winter Trekking Destination
+                            </h5>
+                            <a href="#" class="text-primary fw-medium small">Read More »</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog 2 -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm border-0 h-100 rounded-4">
+                        <img src="{{ asset('images/spiti.jpg') }}" class="card-img-top rounded-top-4"
+                            alt="Spiti Road Trip">
+                        <div class="card-body text-start">
+                            <h5 class="card-title fw-semibold">
+                                Spiti Road Trip: The Drive of a Lifetime
+                            </h5>
+                            <a href="#" class="text-primary fw-medium small">Read More »</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-warning text-white fw-semibold px-4 py-2 rounded-pill mt-2">READ MORE</a>
+        </div>
+    </section>
+
+    <!-- Confusion Section -->
+    <section class="bg-gradient-to-bottom text-white py-5"
+        style="background: linear-gradient(to right, #007a8c, #00c6ff);">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-2">Still in Confusion?</h2>
+            <p class="mb-4">Talk to our Travel-Experts</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#" class="btn btn-warning text-white fw-semibold px-4 py-2 rounded-pill">Book Now</a>
+                <a href="tel:+91xxxxxxxxxx" class="btn btn-outline-light fw-semibold px-4 py-2 rounded-pill border-2">Call
+                    Now</a>
+            </div>
+        </div>
+    </section>
+@endsection
