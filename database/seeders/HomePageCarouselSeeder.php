@@ -34,13 +34,7 @@ class HomePageCarouselSeeder extends Seeder
                 'image' => "assets/front/images/slider/banner3.jpg",
                 'status' => 1,
                 'is_default' => 1,
-            ],
-            [
-                'title' => 'SLIDE',
-                'image' => "assets/front/images/slider/1725688315.png",
-                'status' => 0,
-                'is_default' => 1,
-            ],
+            ]
 
         );
 

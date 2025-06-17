@@ -14,84 +14,31 @@ class GallerySeeder extends Seeder
     public function run(): void
     {
         Gallery::truncate();
+
         $default_galleries = array(
             [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_1.jpg",
+                'title' => 'Mountain Trekking Adventure',
+                'image' => "assets/front/images/gallery/trek_1.jpg",
                 'status' => true,
-                'type' => 'mivan',
+                'type' => 'trekking',
             ],
             [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_2.jpg",
+                'title' => 'Wildlife Safari Tour',
+                'image' => "assets/front/images/gallery/safari_1.jpg",
                 'status' => true,
-                'type' => 'mivan',
+                'type' => 'safari',
             ],
             [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_3.jpg",
+                'title' => 'Beach Holiday Escape',
+                'image' => "assets/front/images/gallery/beach_1.jpg",
                 'status' => true,
-                'type' => 'mivan',
+                'type' => 'beach',
             ],
             [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_4.jpg",
+                'title' => 'Jungle Trekking Expedition',
+                'image' => "assets/front/images/gallery/jungle_1.jpg",
                 'status' => true,
-                'type' => 'mivan',
-            ],
-            [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_5.jpg",
-                'status' => true,
-                'type' => 'mivan',
-            ],
-            [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_6.jpg",
-                'status' => true,
-                'type' => 'mivan',
-            ],
-            [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_7.jpg",
-                'status' => true,
-                'type' => 'mivan',
-            ],
-            [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_8.jpg",
-                'status' => true,
-                'type' => 'post_tensioning',
-            ],
-            [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_9.jpg",
-                'status' => true,
-                'type' => 'post_tensioning',
-            ],
-            [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_10.jpg",
-                'status' => true,
-                'type' => 'post_tensioning',
-            ],
-            [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_11.jpg",
-                'status' => true,
-                'type' => 'post_tensioning',
-            ],
-            [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_12.jpg",
-                'status' => true,
-                'type' => 'post_tensioning',
-            ],
-            [
-                'title' => 'Project Building',
-                'image' => "assets/front/images/gallery/gallery_13.jpg",
-                'status' => true,
-                'type' => 'post_tensioning',
+                'type' => 'trekking',
             ],
         );
 

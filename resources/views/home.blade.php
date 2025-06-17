@@ -4,29 +4,20 @@
     <!-- Hero Carousel -->
     <div id="heroCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <!-- First Slide -->
-            <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1503437313881-503a91226402?auto=format&fit=crop&w=1950&q=80"
-                    class="d-block w-100" alt="adventure" style="height: 90vh; object-fit: cover;">
-                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-                    <h2 class="text-uppercase font-weight-bold">LET'S GO ON</h2>
-                    <h1 class="display-4 font-weight-bold">An Adventure</h1>
-                    <p class="lead">TREKKING | EXPEDITIONS | ADVENTURE SPORTS | ROADTRIPS</p>
-                    <a href="#" class="btn btn-lg mt-3">JOIN NOW</a>
-                </div>
-            </div>
+            @foreach ($sliders as $key => $slider)
+                <div class="carousel-item {{ $key == 0 ? 'active' : '' }}">
+                    <img src="{{ public_asset($slider->image) }}" class="d-block w-100" alt="{{ $slider->title }}"
+                        style="height: 90vh; object-fit: cover;">
 
-            <!-- Second Slide -->
-            <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1503437313881-503a91226402?auto=format&fit=crop&w=1950&q=80"
-                    class="d-block w-100" alt="adventure" style="height: 90vh; object-fit: cover;">
-                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
-                    <h2 class="text-uppercase font-weight-bold">LET'S GO ON</h2>
-                    <h1 class="display-4 font-weight-bold">An Adventure</h1>
-                    <p class="lead">TREKKING | EXPEDITIONS | ADVENTURE SPORTS | ROADTRIPS</p>
-                    <a href="#" class="btn btn-lg mt-3">JOIN NOW</a>
+                    <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                        <h2 class="text-uppercase font-weight-bold">{{ strtoupper($slider->title) }}</h2>
+                        <h1 class="display-4 font-weight-bold">Your Adventure Starts Here</h1>
+                        <p class="lead">TREKKING | TOURS | ADVENTURE | WILDLIFE</p>
+                        <a href="#" class="btn btn-lg mt-3">JOIN NOW</a>
+                    </div>
+
                 </div>
-            </div>
+            @endforeach
         </div>
 
         <!-- Controls -->
@@ -39,6 +30,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+
 
     <!-- Summer Offer Section -->
     <section class="py-5 text-center" style="background-color: #f8fcfd;">
@@ -56,12 +48,13 @@
             <!-- About Section -->
             <div class="row align-items-center py-4 px-2" style="background-color: #f0fdff; border-radius: 8px;">
                 <div class="col-md-3 mb-3 mb-md-0">
-                    <img src="https://shivaadventures.in/images/abtimg.jpg" alt="About Shiva Adventures"
+                    <img src="{{ public_asset('assets/front/images/abtimg.jpg') }}" alt="About {{ $settings->app_name }}"
                         class="img-fluid rounded">
                 </div>
                 <div class="col-md-9 text-left">
                     <p>
-                        Welcome to <strong style="color: #ff7900;">Shiva Adventures</strong> – Trekking Company! We are
+                        Welcome to <strong style="color: #ff7900;">{{ $settings->app_name }}</strong> – Trekking Company! We
+                        are
                         a leading trekking company based in Uttarakhand and we specialize in providing high-quality
                         trekking experiences that are suitable for all skill levels. We are a passionate group of
                         experienced trek leaders who have been exploring the Himalayas for over 15+ years. Our mission
@@ -76,7 +69,7 @@
                 <!-- Card 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 shadow" style="overflow: hidden; border-radius: 20px;">
-                        <img src="https://shivaadventures.in/images/catimg1.jpg" class="card-img" alt="Trekking">
+                        <img class="w-100" height="280px" src="{{ public_asset('assets/front/images/catimg1.jpg') }}" class="card-img" alt="Trekking">
                         <div class="card-img-overlay d-flex align-items-end p-3"
                             style="background: rgba(0,0,0,0.4); border-radius: 20px;">
                             <h4 class="text-white font-weight-bold mb-0">TREKKING</h4>
@@ -87,8 +80,8 @@
                 <!-- Card 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 shadow" style="overflow: hidden; border-radius: 20px;">
-                        <img src="https://shivaadventures.in/images/catimg2.jpg" class="card-img" alt="Roadtrip">
-                        <div class="card-img-overlay d-flex align-items-end p-3"
+                        <img class="w-100" height="280px" src="{{ public_asset('assets/front/images/roadtrip.jpg') }}" class="card-img" alt="Roadtrip">
+                        <div width="100%" class="card-img-overlay d-flex align-items-end p-3"
                             style="background: rgba(0,0,0,0.4); border-radius: 20px;">
                             <h4 class="text-white font-weight-bold mb-0">ROADTRIP</h4>
                         </div>
@@ -98,7 +91,7 @@
                 <!-- Card 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 shadow" style="overflow: hidden; border-radius: 20px;">
-                        <img src="https://shivaadventures.in/images/catimg3.jpg" class="card-img" alt="Pilgrimage">
+                        <img class="w-100" height="280px" src="{{ public_asset('assets/front/images/pilgrimage.jpg') }}" class="card-img" alt="Pilgrimage">
                         <div class="card-img-overlay d-flex align-items-end p-3"
                             style="background: rgba(0,0,0,0.4); border-radius: 20px;">
                             <h4 class="text-white font-weight-bold mb-0">PILGRIMAGE</h4>
@@ -139,7 +132,7 @@
                 <!-- Card Template -->
                 <div class="col-md-4 col-lg-3 mb-4" style="min-width: 250px;">
                     <div class="card shadow-sm rounded" style="border: none;">
-                        <img src="https://shivaadventures.in/images/valley-flower.jpg" class="card-img-top"
+                        <img width="100%" height="180px" src="{{ public_asset('assets/front/images/valley-flower.jpg') }}" class="card-img-top"
                             alt="Valley of Flowers">
                         <div class="card-body">
                             <div class="mb-2">
@@ -163,7 +156,7 @@
                 <!-- Kedarkantha Trek -->
                 <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card shadow-sm rounded">
-                        <img src="https://shivaadventures.in/images/kedarkantha.jpg" class="card-img-top"
+                        <img width="100%" height="180px" src="{{ public_asset('assets/front/images/kedarkantha.jpg') }}" class="card-img-top"
                             alt="Kedarkantha">
                         <div class="card-body">
                             <div class="mb-2">
@@ -186,7 +179,7 @@
                 <!-- Tungnath Trek -->
                 <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card shadow-sm rounded">
-                        <img src="https://shivaadventures.in/images/tungnath.jpg" class="card-img-top"
+                        <img width="100%" height="180px" src="{{ public_asset('assets/front/images/tungnath-trek.webp') }}" class="card-img-top"
                             alt="Tungnath Trek">
                         <div class="card-body">
                             <div class="mb-2">
@@ -209,7 +202,7 @@
                 <!-- Dayara Bugyal -->
                 <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card shadow-sm rounded">
-                        <img src="https://shivaadventures.in/images/dayara.jpg" class="card-img-top" alt="Dayara Bugyal">
+                        <img width="100%" height="180px" src="{{ public_asset('assets/front/images/dayara-bugyal.webp') }}" class="card-img-top" alt="Dayara Bugyal">
                         <div class="card-body">
                             <div class="mb-2">
                                 <span class="text-warning">★★★★★</span>
@@ -231,7 +224,7 @@
                 <!-- Har Ki Dun -->
                 <div class="col-md-4 col-lg-3 mb-4">
                     <div class="card shadow-sm rounded">
-                        <img src="https://shivaadventures.in/images/harkidun.jpg" class="card-img-top" alt="Har Ki Dun">
+                        <img src="{{ public_asset('assets/front/images/har-ki-dun.jpg') }}" class="card-img-top" alt="Har Ki Dun">
                         <div class="card-body">
                             <div class="mb-2">
                                 <span class="text-warning">★★★★★</span>
@@ -271,7 +264,7 @@
                 <!-- Card 1 -->
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm border-0 rounded-lg">
-                        <img src="https://shivaadventures.in/images/kedarnath.jpg" class="card-img-top rounded-top"
+                        <img src="{{ public_asset('assets/front/images/kedarnath-yatra.jpg') }}" class="card-img-top rounded-top"
                             alt="Kedarnath Yatra">
                         <div class="card-body">
                             <div class="mb-2">
@@ -294,7 +287,7 @@
                 <!-- Card 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm border-0 rounded-lg">
-                        <img src="https://shivaadventures.in/images/chardham.jpg" class="card-img-top rounded-top"
+                        <img src="{{ public_asset('assets/front/images/chardham-yatra.jpeg') }}" class="card-img-top rounded-top"
                             alt="Chardham Yatra">
                         <div class="card-body">
                             <div class="mb-2">
@@ -317,7 +310,7 @@
                 <!-- Card 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card shadow-sm border-0 rounded-lg">
-                        <img src="https://shivaadventures.in/images/spiti.jpg" class="card-img-top rounded-top"
+                        <img src="{{ public_asset('assets/front/images/spiti-roadtrip.jpg') }}" class="card-img-top rounded-top"
                             alt="Spiti Roadtrip">
                         <div class="card-body">
                             <div class="mb-2">
@@ -344,14 +337,14 @@
         <div class="container text-center">
             <h2 class="font-weight-bold text-info mb-3">WHY CHOOSE US?</h2>
             <p class="mb-5" style="max-width: 800px; margin: 0 auto;">
-                <strong class="text-info">Shiva Adventures</strong> is your go-to adventure tourism company for an
+                <strong class="text-info">{{ $settings->app_name }}</strong> is your go-to adventure tourism company for an
                 unforgettable experience.
                 Our team of experts ensures your safety as we prioritize responsible and sustainable tourism practices.
-                <span class="text-primary">From trekking to camping, road trips to mountain expeditions</span>, we
+                <span class="theme-text">From trekking to camping, road trips to mountain expeditions</span>, we
                 provide a wide range of adventure services.
                 Our commitment to excellent customer service means we’re always available to answer any questions or
                 concerns.
-                Choose Shiva Adventures for a memorable and enjoyable adventure in the stunning Himalayan region.
+                Choose {{ $settings->app_name }} for a memorable and enjoyable adventure in the stunning Himalayan region.
             </p>
 
             <div class="row justify-content-center">
@@ -405,7 +398,8 @@
                         <div class="border rounded p-3">
                             <strong>Rahul Shrivastava</strong>
                             <hr />
-                            <p>The Spiti road trip with Shiva Adventures was incredible! From the stunning scenery to
+                            <p>The Spiti road trip with {{ $settings->app_name }} was incredible! From the stunning scenery
+                                to
                                 the knowledgeable guides, everything was top-notch. I can't wait to book my next
                                 adventure with them.</p>
                         </div>
@@ -416,7 +410,8 @@
                         <div class="border rounded p-3">
                             <strong>Asim Khan</strong>
                             <hr />
-                            <p>What an amazing experience! The Spiti road trip with Shiva Adventures was an adventure of
+                            <p>What an amazing experience! The Spiti road trip with {{ $settings->app_name }} was an
+                                adventure of
                                 a lifetime. The team was professional, friendly, and ensured our safety at all times.
                             </p>
                         </div>
@@ -427,7 +422,7 @@
                         <div class="border rounded p-3">
                             <strong>Mahi Jain</strong>
                             <hr />
-                            <p>The Kedarkantha winter trek with Shiva Adventures was incredible! The guides were
+                            <p>The Kedarkantha winter trek with {{ $settings->app_name }} was incredible! The guides were
                                 knowledgeable and supportive, and the views were breathtaking. I highly recommend this
                                 experience.</p>
                         </div>
@@ -453,34 +448,28 @@
             <!-- Rating Logos -->
             <div class="row justify-content-center mt-5">
                 <div class="col-md-3 col-6 mb-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/768px-Google_%22G%22_Logo.svg.png"
-                        width="30">
-                    <strong>GOOGLE RATINGS</strong>
-                    <span class="text-warning">5.0 ★★★★★</span>
+                    <img src="{{ public_asset('assets/front/images/google-rating.png') }}" width="100%">
                 </div>
                 <div class="col-md-3 col-6 mb-3">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-                        width="30">
-                    <strong>FACEBOOK RATINGS</strong>
-                    <span class="text-warning">5.0 ★★★★★</span>
+                    <img src="{{ public_asset('assets/front/images/facebook-rating.png') }}" width="100%">
                 </div>
             </div>
 
             <!-- Book Now Button -->
-            <div class="mt-4">
+            {{-- <div class="mt-4">
                 <a href="#booking" class="btn btn-warning shadow"
                     style="background: linear-gradient(135deg, #ff7f50, #ff5722); color: #fff; padding: 12px 24px; border-radius: 8px;">
                     BOOK NOW
                 </a>
-            </div>
+            </div> --}}
         </div>
     </section>
 
-    <!-- Travel Blogs Section -->
+    {{-- <!-- Travel Blogs Section -->
     <section class="travel-blogs py-5 text-center">
         <div class="container">
             <p class="text-muted">Read our travel related blog section</p>
-            <h2 class="fw-bold text-primary">TRAVEL BLOGS</h2>
+            <h2 class="fw-bold theme-text">TRAVEL BLOGS</h2>
 
             <div class="row mt-4">
                 <!-- Blog 1 -->
@@ -492,7 +481,7 @@
                             <h5 class="card-title fw-semibold">
                                 Kedarkantha Trek – A Journey to the Most Magnificent Winter Trekking Destination
                             </h5>
-                            <a href="#" class="text-primary fw-medium small">Read More »</a>
+                            <a href="#" class="theme-text fw-medium small">Read More »</a>
                         </div>
                     </div>
                 </div>
@@ -506,7 +495,7 @@
                             <h5 class="card-title fw-semibold">
                                 Spiti Road Trip: The Drive of a Lifetime
                             </h5>
-                            <a href="#" class="text-primary fw-medium small">Read More »</a>
+                            <a href="#" class="theme-text fw-medium small">Read More »</a>
                         </div>
                     </div>
                 </div>
@@ -514,7 +503,7 @@
 
             <a href="#" class="btn btn-warning text-white fw-semibold px-4 py-2 rounded-pill mt-2">READ MORE</a>
         </div>
-    </section>
+    </section> --}}
 
     <!-- Confusion Section -->
     <section class="bg-gradient-to-bottom text-white py-5"
@@ -524,7 +513,7 @@
             <p class="mb-4">Talk to our Travel-Experts</p>
             <div class="d-flex justify-content-center gap-3">
                 <a href="#" class="btn btn-warning text-white fw-semibold px-4 py-2 rounded-pill">Book Now</a>
-                <a href="tel:+91xxxxxxxxxx" class="btn btn-outline-light fw-semibold px-4 py-2 rounded-pill border-2">Call
+                <a href="tel:{{ $settings->contact }}" class="btn btn-outline-light fw-semibold px-4 py-2 rounded-pill border-2">Call
                     Now</a>
             </div>
         </div>

@@ -100,14 +100,36 @@ if (!function_exists('returnWebJsonResponse')) {
     }
 }
 
+// if (!function_exists('explodeEmail')) {
+//     function explodeEmail($all_email = null, $seprator = ' , ')
+//     {
+//         if(!empty($all_email)){
+//             $emails = explode(',', $all_email);
+//             if(count($emails) > 0){
+//                 foreach($emails as $key => $email){
+//                     echo "<a href='mailto:".$email."'>".$email."</a>". $seprator;
+//                 }
+//             }
+//             return false;
+//         }
+//         return false;
+//     }
+// }
+
 if (!function_exists('explodeEmail')) {
-    function explodeEmail($all_email = null)
+    function explodeEmail($all_email = null, $seprator = ' , ', $class = "")
     {
-        if(!empty($all_email)){
+        if (!empty($all_email)) {
             $emails = explode(',', $all_email);
-            if(count($emails) > 0){
-                foreach($emails as $key => $email){
-                    echo "<a href='mailto:".$email."'>".$email."</a> <br>";
+            $emails = array_map('trim', $emails); // Clean spaces
+            $count = count($emails);
+
+            foreach ($emails as $key => $email) {
+                echo "<a class='" . $class . "' href='mailto:$email' style='text-decoration: none;'>$email</a>";
+
+                // Only add separator if not the last email
+                if ($key < $count - 1) {
+                    echo $seprator;
                 }
             }
             return false;
@@ -115,6 +137,7 @@ if (!function_exists('explodeEmail')) {
         return false;
     }
 }
+
 
 // $settings = getSettings();
 // $social = getSocialMediaLink();

@@ -49,7 +49,7 @@
                                             @csrf
                                             @method('DELETE')
                                             <a href="{{ route('admin.home-page-carousel.edit', $carousel) }}"
-                                                class="text-primary"><i class="menu-icon tf-icons bx bx-pencil"></i></a>
+                                                class="theme-text"><i class="menu-icon tf-icons bx bx-pencil"></i></a>
                                             <button class="text-danger btn"><i
                                                     class="menu-icon tf-icons bx bx-trash"></i></button>
                                         </form>

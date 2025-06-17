@@ -3,9 +3,9 @@
 @section('content')
 
     <!-- Page Banner -->
-    <section class="py-5 bg-primary text-white text-center">
+    <section class="py-5 theme-bg text-light text-center heading-section">
         <div class="container">
-            <h1 class="display-5 fw-bold">About Shiva Adventures</h1>
+            <h1 class="display-6 fw-bold">About {{ $settings->app_name }}</h1>
             <p class="lead">Your trusted partner in Himalayan trekking & travel experiences</p>
         </div>
     </section>
@@ -15,13 +15,14 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <img src="{{ asset('images/about-himalayas.jpg') }}" alt="Shiva Adventures"
+                    {{-- <img src="{{ asset('images/about-himalayas.jpg') }}" alt="{{ $settings->app_name }}" --}}
+                    <img src="https://static.toiimg.com/thumb/66461463/adventure-tourism.jpg?width=1000&height=800" alt="{{ $settings->app_name }}"
                         class="img-fluid rounded shadow-sm">
                 </div>
                 <div class="col-md-6">
-                    <h2 class="text-primary fw-bold">Welcome to Shiva Adventures</h2>
+                    <h2 class="theme-text fw-bold">Welcome to {{ $settings->app_name }}</h2>
                     <p class="text-muted">
-                        Shiva Adventures is a leading trekking and travel organization in India, dedicated to crafting
+                        {{ $settings->app_name }} is a leading trekking and travel organization in India, dedicated to crafting
                         unforgettable journeys into the heart of the Himalayas. With over <strong>15+ years of
                             experience</strong>, our team specializes in high-quality trekking experiences suited for all
                         skill levels.
@@ -39,28 +40,28 @@
     <!-- Why Choose Us -->
     <section class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center text-primary fw-bold mb-4">Why Choose Shiva Adventures?</h2>
+            <h2 class="text-center theme-text fw-bold mb-4">Why Choose {{ $settings->app_name }}?</h2>
             <div class="row text-center">
                 <div class="col-md-3 mb-4">
-                    <i class="fas fa-hiking fa-2x text-primary mb-2"></i>
+                    <i class="fas fa-hiking fa-2x theme-text mb-2"></i>
                     <h5 class="fw-bold">Expert Guides</h5>
                     <p class="small text-muted">Certified, friendly and knowledgeable local guides who know every corner of
                         the Himalayas.</p>
                 </div>
                 <div class="col-md-3 mb-4">
-                    <i class="fas fa-star fa-2x text-primary mb-2"></i>
+                    <i class="fas fa-star fa-2x theme-text mb-2"></i>
                     <h5 class="fw-bold">5-Star Rated</h5>
                     <p class="small text-muted">Loved by travelers on Google and Facebook. 5.0 star ratings from happy
                         adventurers.</p>
                 </div>
                 <div class="col-md-3 mb-4">
-                    <i class="fas fa-mountain fa-2x text-primary mb-2"></i>
+                    <i class="fas fa-mountain fa-2x theme-text mb-2"></i>
                     <h5 class="fw-bold">Diverse Destinations</h5>
                     <p class="small text-muted">From Kedarkantha to Spiti Valley, choose from curated treks and road trips
                         across North India.</p>
                 </div>
                 <div class="col-md-3 mb-4">
-                    <i class="fas fa-shield-alt fa-2x text-primary mb-2"></i>
+                    <i class="fas fa-shield-alt fa-2x theme-text mb-2"></i>
                     <h5 class="fw-bold">Safety First</h5>
                     <p class="small text-muted">All our trips follow strict safety protocols and are supported by expert
                         backup teams.</p>

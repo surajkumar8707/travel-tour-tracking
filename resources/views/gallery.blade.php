@@ -2,6 +2,34 @@
 @section('title', getSettings()->app_name . ':: Gallery Page')
 @section('content')
 
+    <!-- Page Banner -->
+    <section class="py-5 theme-bg text-light text-center heading-section">
+        <div class="container">
+            <h1 class="display-6 fw-bold">Gallery {{ $settings->app_name }}</h1>
+            <p class="lead">Your trusted partner in Himalayan trekking & travel experiences</p>
+        </div>
+    </section>
+
+    <section class="py-5 text-center">
+        <div class="container">
+            <h1 class="banner-title">{{ $settings->app_name }}</h1>
+            @if (count($galleries) > 0)
+                <div class="row">
+                    @foreach ($galleries as $gallery)
+                        <div class="col-md-4">
+                            <img class="w-100 my-3" src="{{ public_asset($gallery->image) }}" alt="">
+                        </div>
+                    @endforeach
+                </div>
+            @else
+            @endif
+        </div>
+    </section>
+
+@endsection
+
+{{-- @section('content')
+
     <div id="banner-area" class="banner-area1" style="background-image:url(images/design.png);background-color:#3f1d71 ;">
         <div class="banner-text">
             <div class="container">
@@ -53,4 +81,4 @@
     </section>
 
 
-@endsection
+@endsection --}}

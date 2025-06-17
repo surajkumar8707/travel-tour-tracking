@@ -522,13 +522,13 @@ progress {
   }
 }
 
-.display-5 {
+.display-6 {
   font-size: calc(1.325rem + 0.9vw);
   font-weight: 500;
   line-height: 1.1;
 }
 @media (min-width: 1200px) {
-  .display-5 {
+  .display-6 {
     font-size: 2rem;
   }
 }
@@ -9973,7 +9973,7 @@ button.list-group-item-gray.active {
 }
 
 /* rtl:end:remove */
-.text-primary {
+.theme-text {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity)) !important;
 }

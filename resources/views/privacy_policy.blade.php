@@ -4,9 +4,9 @@
 
     <section class="py-5">
         <div class="container">
-            <h1 class="fw-bold text-primary mb-4">Privacy Policy</h1>
+            <h1 class="fw-bold theme-text mb-4">Privacy Policy</h1>
 
-            <p>At <strong>Shiva Adventures</strong>, we value your privacy and are committed to protecting the personal
+            <p>At <strong>{{ $settings->app_name }}</strong>, we value your privacy and are committed to protecting the personal
                 information you share with us. This Privacy Policy outlines how we collect, use, and safeguard your data.
             </p>
 

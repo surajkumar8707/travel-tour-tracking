@@ -63,10 +63,11 @@ class FrontController extends Controller
     }
     public function gallery()
     {
-        $mivans = Gallery::where(['status' => 1, 'type' => 'mivan'])->get();
-        $post_tensionings = Gallery::where(['status' => 1, 'type' => 'post_tensioning'])->get();
+        // $mivans = Gallery::where(['status' => 1, 'type' => 'mivan'])->get();
+        // $post_tensionings = Gallery::where(['status' => 1, 'type' => 'post_tensioning'])->get();
+        $galleries = Gallery::where('status',1)->get();
         // dd($mivans->toArray(), $post_tensionings->toArray());
-        return view('gallery', compact('mivans', 'post_tensionings'));
+        return view('gallery', compact('galleries'));
     }
     public function construction()
     {
@@ -120,12 +121,12 @@ class FrontController extends Controller
         ]);
 
         $create = [
-            'name'=> $request->fname." ".$request->lname,
-            'email'=> $request->email,
-            'phone'=> $request->phone,
-            'city'=> $request->city,
-            'service'=> $request->service,
-            'message'=> $request->message,
+            'name' => $request->fname . " " . $request->lname,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'city' => $request->city,
+            // 'service' => $request->service,
+            'message' => $request->message,
         ];
         $contact = Contact::create($create);
         // dd($contact);

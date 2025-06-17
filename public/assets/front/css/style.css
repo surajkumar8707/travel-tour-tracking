@@ -3,6 +3,10 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
+a, a:hover{
+    color: black;
+    text-decoration: none;
+}
 .top-bar {
     background-color: #0088a9;
 }
@@ -81,4 +85,17 @@ footer ul li {
 
 footer .btn i {
     font-size: 14px;
+}
+
+.heading-section{
+    color: white;
+    background-color: #0088a9;
+}
+
+.theme-text{
+    color: #0088a9;
+}
+
+.theme-bg{
+    background-color: #0088a9;
 }

@@ -11232,12 +11232,12 @@ button.bg-dark:hover {
     color: #fff !important
 }
 
-.text-primary {
+.theme-text {
     color: #007bff !important
 }
 
-a.text-primary:focus,
-a.text-primary:hover {
+a.theme-text:focus,
+a.theme-text:hover {
     color: #0056b3 !important
 }
 

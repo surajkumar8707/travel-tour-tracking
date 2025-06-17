@@ -4,10 +4,10 @@
 
     <section class="py-5">
         <div class="container">
-            <h1 class="fw-bold text-primary mb-4">Terms & Conditions</h1>
+            <h1 class="fw-bold theme-text mb-4">Terms & Conditions</h1>
 
             <p>Please read these Terms and Conditions ("Terms", "Terms and Conditions") carefully before using our website
-                or booking a trip with <strong>Shiva Adventures</strong>.</p>
+                or booking a trip with <strong>{{ $settings->app_name }}</strong>.</p>
 
             <h4 class="mt-4 fw-semibold">1. Booking Policy</h4>
             <ul>
@@ -35,7 +35,7 @@
             <h4 class="mt-4 fw-semibold">5. Responsibilities</h4>
             <ul>
                 <li>Participants are responsible for their belongings and fitness to undertake the trek.</li>
-                <li>Shiva Adventures is not liable for any injury, loss, or damage during the trip caused by unforeseen
+                <li>{{ $settings->app_name }} is not liable for any injury, loss, or damage during the trip caused by unforeseen
                     events.</li>
             </ul>
 
@@ -48,7 +48,7 @@
                 to opt out.</p>
 
             <h4 class="mt-4 fw-semibold">8. Changes to Itinerary</h4>
-            <p>Shiva Adventures reserves the right to modify the itinerary due to weather, safety, or operational concerns.
+            <p>{{ $settings->app_name }} reserves the right to modify the itinerary due to weather, safety, or operational concerns.
             </p>
 
             <p class="mt-4"><strong>Last Updated:</strong> June 2025</p>
