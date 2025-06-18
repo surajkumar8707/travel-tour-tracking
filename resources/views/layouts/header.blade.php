@@ -1,10 +1,10 @@
 <!-- Top Bar -->
 <div class="top-bar d-flex justify-content-center align-items-center text-white py-2">
     <div class="d-flex align-items-center">
-        <i class="fas fa-envelope"></i> &nbsp;
-        {{ explodeEmail($settings->email, '&nbsp;|&nbsp;', 'text-light') }}
+        {{-- <i class="fas fa-envelope"></i> &nbsp;
+        {{ explodeEmail($settings->email, '&nbsp;|&nbsp;', 'text-light') }} --}}
         {{-- <a class="text-light" href="tel:{{ $settings->contact }}"><i class="fas fa-phone-alt mr-2"></i> Email: +91-{{ $settings->contact }}</a> --}}
-        <span class="mx-3">|</span>
+        {{-- <span class="mx-3">|</span> --}}
         <a class="text-light" href="tel:{{ $settings->contact }}"><i class="fas fa-phone-alt mr-2"></i> CALL:
             +91-{{ $settings->contact }}</a>
         <span class="mx-3">|</span>
@@ -41,9 +41,9 @@
             @else
                 {{ $settings->app_name }}
             @endif
-            <div>
+            {{-- <div>
                 <span style="color: orange; font-weight: bold;">{{ $settings->app_name }}</span>
-            </div>
+            </div> --}}
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">

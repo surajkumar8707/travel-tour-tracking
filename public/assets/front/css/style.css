@@ -1,12 +1,32 @@
 /* Custom Styles */
+html,
+body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
 }
 
-a, a:hover{
+body::after {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    border-left: 2px solid red;
+    pointer-events: none;
+    z-index: 99999;
+}
+
+a,
+a:hover {
     color: black;
     text-decoration: none;
 }
+
 .top-bar {
     background-color: #0088a9;
 }
@@ -54,14 +74,16 @@ a, a:hover{
 }
 
 .card-img {
-    object-fit: cover;
-    height: 100%;
     width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .swiper-button-next,
 .swiper-button-prev {
     display: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
 
 .card-title {
@@ -87,15 +109,15 @@ footer .btn i {
     font-size: 14px;
 }
 
-.heading-section{
+.heading-section {
     color: white;
     background-color: #0088a9;
 }
 
-.theme-text{
+.theme-text {
     color: #0088a9;
 }
 
-.theme-bg{
+.theme-bg {
     background-color: #0088a9;
 }
