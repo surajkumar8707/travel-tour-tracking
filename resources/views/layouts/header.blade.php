@@ -31,7 +31,7 @@
 </div>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
     <div class="container">
         <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center" href="#">
@@ -58,20 +58,38 @@
                         Us</a></li>
                 <li class="nav-item px-2"><a class="nav-link @isActiveRoute('front.gallery')"
                         href="{{ route('front.gallery') }}">Gallery</a></li>
-                <li class="nav-item dropdown px-2">
+                {{-- <li class="nav-item dropdown px-2">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Treks</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Trek 1</a>
-                        <a class="dropdown-item" href="#">Trek 2</a>
+                        <a class="dropdown-item" href="{{ route('front.kedarnath') }}">Trek 1</a>
+                        <a class="dropdown-item" href="{{ route('front.kedarnath') }}">Trek 2</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown px-2">
                     <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Trips</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Trip 1</a>
-                        <a class="dropdown-item" href="#">Trip 2</a>
+                        <a class="dropdown-item" href="{{ route('front.kedarnath') }}">Trip 1</a>
+                        <a class="dropdown-item" href="{{ route('front.kedarnath') }}">Trip 2</a>
+                    </div>
+                </li> --}}
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Treks</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('front.kedarnath') }}">Kedarnath Trek</a>
+                        <a class="dropdown-item" href="{{ route('front.tungnath.chandrashila') }}">Tungnath-Chandrashila
+                            Trek</a>
+                        <a class="dropdown-item" href="{{ route('front.nag.tibba') }}">Nag Tibba Trek</a>
+                        <a class="dropdown-item" href="{{ route('front.valley.of.flowers') }}">Valley of Flowers Trek</a>
                     </div>
                 </li>
+                <li class="nav-item dropdown px-2">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Trips</a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ route('front.harsil.valley') }}">Harsil Valley Trip</a>
+                        <a class="dropdown-item" href="{{ route('front.chardham.yatra') }}">Chardham Yatra</a>
+                    </div>
+                </li>
+
                 <li class="nav-item px-2"><a class="nav-link @isActiveRoute('front.contact')"
                         href="{{ route('front.contact') }}">Contact us</a></li>
             </ul>

@@ -56,6 +56,25 @@ class FrontController extends Controller
     {
         return view('about');
     }
+
+    public function kedarnath(){
+        return view('kedarnath');
+    }
+    public function tungnathChandrashila(){
+        return view('tungnath_chandrashila');
+    }
+    public function nagTibba(){
+        return view('nag_tibba');
+    }
+    public function valleyOfFlowers(){
+        return view('valley_of_flowers');
+    }
+    public function harsilValley(){
+        return view('harsil_valley');
+    }
+    public function chardhamYatra(){
+        return view('chardham_yatra');
+    }
     public function room()
     {
         $rooms = Room::where('status', 1)->get();

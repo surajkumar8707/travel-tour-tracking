@@ -24,6 +24,12 @@ Route::group(['prefix' => '/', 'as' => 'front.'], function () {
     Route::get('/book-room/{id?}', [\App\Http\Controllers\FrontController::class, 'openRoomBookingPage'])->name('room.book');
     Route::post('/booking/store', [\App\Http\Controllers\FrontController::class, 'roomBookingStore'])->name('room.store');
     Route::get('/about', [\App\Http\Controllers\FrontController::class, 'aboutUs'])->name('about');
+    Route::get('/kedarnath', [\App\Http\Controllers\FrontController::class, 'kedarnath'])->name('kedarnath');
+    Route::get('/tungnath-chandrashila', [\App\Http\Controllers\FrontController::class, 'tungnathChandrashila'])->name('tungnath.chandrashila');
+    Route::get('/nag-tibba', [\App\Http\Controllers\FrontController::class, 'nagTibba'])->name('nag.tibba');
+    Route::get('/valley-of-flowers', [\App\Http\Controllers\FrontController::class, 'valleyOfFlowers'])->name('valley.of.flowers');
+    Route::get('/harsil-valley', [\App\Http\Controllers\FrontController::class, 'harsilValley'])->name('harsil.valley');
+    Route::get('/chardham-yatra', [\App\Http\Controllers\FrontController::class, 'chardhamYatra'])->name('chardham.yatra');
     Route::get('/room', [\App\Http\Controllers\FrontController::class, 'room'])->name('room');
     Route::get('/gallery', [\App\Http\Controllers\FrontController::class, 'gallery'])->name('gallery');
     Route::get('/construction', [\App\Http\Controllers\FrontController::class, 'construction'])->name('construction');
