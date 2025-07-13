@@ -22,6 +22,15 @@
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
+    <style>
+        .header-logo {
+            padding: 3px;
+            border-radius: 5px;
+            background: #0088a9;
+            color: white !important;
+        }
+    </style>
+
     <!-- custom css -->
     @stack('styles')
 </head>

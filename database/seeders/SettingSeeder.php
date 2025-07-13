@@ -18,12 +18,13 @@ class SettingSeeder extends Seeder
 
         // Seed new data
         Setting::create([
-            'app_name' => 'Travel Tour Treck',
+            'app_name' => 'Travel Treck Treck and Tour',
             'email' => 'travel@gmail.com',
             'whatsapp' => '8707633860',
             'contact' => '8707633860',
             'address' => 'Gorakhpur',
-            'header_image' => "assets/front/images/header.jpg",
+            // 'header_image' => "assets/front/images/header.jpg",
+            'header_image' => NULL,
             'is_fresh' => 1,
         ]);
     }

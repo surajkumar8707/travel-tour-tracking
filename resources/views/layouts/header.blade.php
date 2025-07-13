@@ -34,12 +34,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
     <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand d-flex align-items-center" href="#">
+        <a class="navbar-brand d-flex align-items-center" href="{{ route('front.home') }}">
             @if (isset($settings->header_image) and !empty($settings->header_image))
                 <img loading="{{ $settings->app_name }}" src="{{ public_asset($settings->header_image) }}"
                     alt="{{ $settings->app_name }}" alt="logo" height="40" class="mr-2">
             @else
-                {{ $settings->app_name }}
+                <span class="header-logo">{{ $settings->app_name }}</span>
             @endif
             {{-- <div>
                 <span style="color: orange; font-weight: bold;">{{ $settings->app_name }}</span>
