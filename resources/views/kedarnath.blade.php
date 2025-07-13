@@ -351,6 +351,51 @@
     </style> --}}
 @endpush
 @section('content')
+
+    <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="{{ public_asset('assets/front/images/slider/kedarnath_trek/kedarnath_trek_1.jpg') }}"
+                    class="d-block w-100" alt="SKY" style="height: 90vh; object-fit: cover;">
+
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                    <h1 class="text-uppercase font-weight-bold">Kedarnath TREKKING</h1>
+                    <p class="lead">A SACRED JOURNEY TO THE ABODE OF LORD SHIVA</p>
+                </div>
+
+            </div>
+            <div class="carousel-item active">
+                <img src="{{ public_asset('assets/front/images/slider/kedarnath_trek/kedarnath_trek_2.jpg') }}"
+                    class="d-block w-100" alt="Lake" style="height: 90vh; object-fit: cover;">
+
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                    <h1 class="text-uppercase font-weight-bold">Kedarnath TREKKING</h1>
+                    <p class="lead">A SACRED JOURNEY TO THE ABODE OF LORD SHIVA</p>
+                </div>
+
+            </div>
+            <div class="carousel-item">
+                <img src="{{ public_asset('assets/front/images/slider/kedarnath_trek/kedarnath_trek_3.jpg') }}"
+                    class="d-block w-100" alt="LANDCAPE" style="height: 90vh; object-fit: cover;">
+
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100">
+                    <h1 class="text-uppercase font-weight-bold">Kedarnath TREKKING</h1>
+                    <p class="lead">A SACRED JOURNEY TO THE ABODE OF LORD SHIVA</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(100%);"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(100%);"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
     <section class="container py-4">
         <div class="row g-4">
             <!-- Left/Main Content -->
@@ -458,7 +503,8 @@
                         <!-- Additional tabs can go here -->
                     </ul>
                     <div class="mt-4 text-muted">
-                        <h3 class="h5 fw-semibold text-dark mb-2">Kedarnath Temple Trek the India’s Most Popular Destination
+                        <h3 class="h5 fw-semibold text-dark mb-2">Kedarnath Temple Trek the India’s Most Popular
+                            Destination
                             in Uttarakhand Himalayas, Complete information 2025 Yatra trek </h3>
                         <p>
                             Kedarnath Trek is a renowned pilgrimage destination, forming part of the ‘Char Dham’ in
@@ -584,7 +630,8 @@
                                 </tr>
                                 <tr>
                                     <td><strong>Group Size:</strong></td>
-                                    <td><span style="font-weight: 400;">A minimum group size of 5 people and a maximum of 30
+                                    <td><span style="font-weight: 400;">A minimum group size of 5 people and a maximum of
+                                            30
                                             people.</span>
                                         <p></p>
                                         <p><span style="font-weight: 400;">(In case anyone wants to book a private tour for
@@ -610,13 +657,15 @@
                                 fills you with an exceptional spiritual embodiment.</span></p>
                         <p><span style="font-weight: 400;">The trek officially commences from Gaurikund covering many
                                 campsites along the
-                                way.</span> <span style="font-weight: 400;">Jungle Chatti, Bheembali, and Linchauli are some
+                                way.</span> <span style="font-weight: 400;">Jungle Chatti, Bheembali, and Linchauli are
+                                some
                                 of the camps we
                                 pass during the trek.&nbsp; The entirety of journey trekkers would find devotees chanting
                                 and celebrating
                                 the trail. Echo of “Har Har Mahadev” fills you with an exceptional spiritual
                                 embodiment.</span></p>
-                        <p><span style="font-weight: 400;">The final reach of Kedarnath is enough to overwhelm devotees with
+                        <p><span style="font-weight: 400;">The final reach of Kedarnath is enough to overwhelm devotees
+                                with
                                 the chants of
                                 “Mahadev”. Temple covered in long ribbons of marigold garlands, long happy queues of
                                 devotees and the
@@ -661,7 +710,8 @@
                             <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Souvenirs from
                                     Rishikesh are great
                                     for memories.</span></li>
-                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">There are countless
+                            <li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">There are
+                                    countless
                                     photogenic
                                     vistas, so we recommend that you prepare yourself for any aesthetic shoots. The best
                                     pictures are those
